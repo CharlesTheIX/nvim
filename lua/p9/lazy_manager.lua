@@ -44,7 +44,9 @@ local plugins = {
   -- Harpoon
   { 'ThePrimeagen/harpoon' },
   -- Undotree
-  { 'mbbill/undotree' }
+  { 'mbbill/undotree' },
+  -- Fugitive
+  { 'tpope/vim-fugitive' }
 }
 
 
