@@ -13,6 +13,7 @@ The following are the required dependancies for neovim and all plugins to work c
 
 - Install NerdFont
     - The font I use is the Nerd Font Jetbrains mono and can be downloaded [here](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip).
+    - The nerd font should be set as the font in the terminal you are using (ie iTerm2 for Mac) under the profile if applicable.
 
 - Install ripgrep
     - To check if riggrep is installed enter 'rg --version' into your terminal.

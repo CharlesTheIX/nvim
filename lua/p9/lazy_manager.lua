@@ -1,4 +1,4 @@
--- LAZY MANAGER
+-- LAZY MANAGER 
 -- This file is used to manage the plugins that are installed lazily via the lazy.nvim plugin.
 -- This is where you can set up the plugins that you want to install lazily and configure them as needed.
 -- This is also where you can set up the lazy.nvim plugin itself.
@@ -42,7 +42,9 @@ local plugins = {
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   { 'nvim-treesitter/playground' },
   -- Harpoon
-  { 'ThePrimeagen/harpoon' }
+  { 'ThePrimeagen/harpoon' },
+  -- Undotree
+  { 'mbbill/undotree' }
 }
 
 
