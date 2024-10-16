@@ -12,3 +12,7 @@ vim.g.have_nerd_font = true -- Enable the Nerd font to be used
 
 -- Netrw
 vim.cmd("let g:netrw_liststyle = 3")
+
+-- Remaps
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = 'Return to [p]roject [v]iew from buffer' })
+vim.keymap.set("n", "<leader>w", "<C-w>", { desc = 'Enter window mode' })

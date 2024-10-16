@@ -1,26 +1,26 @@
--- COLORSCHEME
--- The rose pine colorscheme configuration.
--- This file is sourced in lua/p9/init.lua.
+return {
+  "rose-pine/neovim",
+  name = "rose-pine",
+  config = function()
+    require("rose-pine").setup({
+      variant = "auto", -- auto, main, moon, or dawn
+      dark_variant = "main", -- main, moon, or dawn
+      dim_inactive_windows = false,
+      extend_background_behind_borders = true,
 
-require("rose-pine").setup({
-    variant = "auto", -- auto, main, moon, or dawn
-    dark_variant = "main", -- main, moon, or dawn
-    dim_inactive_windows = false,
-    extend_background_behind_borders = true,
-
-    enable = {
+      enable = {
         terminal = true,
         legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
         migrations = true, -- Handle deprecated options automatically
-    },
+      },
 
-    styles = {
+      styles = {
         bold = true,
         italic = true,
         transparency = false,
-    },
+      },
 
-    groups = {
+      groups = {
         border = "muted",
         link = "iris",
         panel = "surface",
@@ -49,22 +49,22 @@ require("rose-pine").setup({
         h4 = "gold",
         h5 = "pine",
         h6 = "foam",
-    },
+      },
 
-    palette = {
+      palette = {
         -- Override the builtin palette per variant
         -- moon = {
         --     base = '#18191a',
         --     overlay = '#363738',
         -- },
-    },
+      },
 
-    highlight_groups = {
-        -- Comment = { fg = "foam" },
-        -- VertSplit = { fg = "muted", bg = "muted" },
-    },
+      highlight_groups = {
+          -- Comment = { fg = "foam" },
+          -- VertSplit = { fg = "muted", bg = "muted" },
+      },
 
-    before_highlight = function(group, highlight, palette)
+      before_highlight = function(group, highlight, palette)
         -- Disable all undercurls
         -- if highlight.undercurl then
         --     highlight.undercurl = false
@@ -74,19 +74,12 @@ require("rose-pine").setup({
         -- if highlight.fg == palette.pine then
         --     highlight.fg = palette.foam
         -- end
-    end,
-})
+      end,
+    })
 
--- vim.cmd("colorscheme rose-pine")
--- vim.cmd("colorscheme rose-pine-main")
--- vim.cmd("colorscheme rose-pine-moon")
--- vim.cmd("colorscheme rose-pine-dawn")
-
-function ColorMyPencils(color)
-  color = color or 'rose-pine'
-  vim.cmd.colorscheme(color)
-  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none"})
-end
-
-ColorMyPencils()
+    -- vim.cmd("colorscheme rose-pine")
+    -- vim.cmd("colorscheme rose-pine-main")
+    -- vim.cmd("colorscheme rose-pine-moon")
+    -- vim.cmd("colorscheme rose-pine-dawn")
+  end
+}
