@@ -1,1 +1,101 @@
-return {}
+-- LSP COINFIGURATION
+
+return {
+  {
+    'williamboman/mason.nvim',
+    config = function()
+      require('mason').setup()
+    end
+  },
+  {
+    'williamboman/mason-lspconfig.nvim',
+    config = function()
+      ensure_installed = {
+        'angularls',
+        'bashls',
+        'pkgbuild_language_server',
+        'ast_grep',
+        'css_variables',
+        'cssls',
+        'cssmodules_ls',
+        'tailwindcss',
+        'unocss',
+        'docker_compose_language_service',
+        'dockerl',
+        'golangci_lint_ls',
+        'gopls',
+        'harper_ls',
+        'templ',
+        'html',
+        'lwc_ls',
+        'stimulus_ls',
+        'twiggy_language_server',
+        'biome',
+        'denols',
+        'eslint',
+        'glint',
+        'lwc_ls',
+        'quick_lint_js',
+        'rome',
+        'ts_ls',
+        'vtsls',
+        'jsonls',
+        'spectral',
+        'lua_ls',
+        'grammarly',
+        'ltex',
+        'markdown_oxide',
+        'marksman',
+        'prosemd_lsp',
+        'remark_ls',
+        'vale_ls',
+        'zk',
+        'intelephense',
+        'phpactor',
+        'psalm',
+        'stimulus_ls',
+        'powershell_es',
+        'basedpyright',
+        'jedi_language_server',
+        'mutt_ls',
+        'pylsp',
+        'pylyzer',
+        'pyre',
+        'pyright',
+        'ruff',
+        'ruff_lsp',
+        'sourcery',
+        'rust_analyzer',
+        'somesass_ls',
+        'sqlls',
+        'sqls',
+        'terraformls',
+        'tflint',
+        'textlsp',
+        'vale_ls',
+        'quick_lint_js',
+        'vtsls',
+        'tsp_server',
+        'volar',
+        'vuels',
+        'gitlab_ci_ls',
+        'hydra_lsp',
+        'yamlls',
+        'autotools_ls',
+        'custom_elements_ls',
+        'diagnosticls',
+        'dprint',
+        'efm',
+        'typos_lsp'
+      }
+    end
+  },
+  {
+    'neovim/nvim-lspconfig',
+    config = function()
+      local lspconfig = require('lspconfig')
+      lspconfig.lua_ls.setup({})
+    end
+  }
+}
+
